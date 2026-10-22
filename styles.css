@@ -1,0 +1,296 @@
+/* ── RESET ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f4f6f8;
+    color: #1a202c;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ── HEADER ── */
+.header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-bottom: 4px solid #3b82f6;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.header p {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+/* ── CONTENEDOR ── */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* ── TÍTULOS DE SECCIÓN ── */
+h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e3a5f;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dde3ec;
+}
+
+/* ── TARJETAS DE RESUMEN (Flexbox) ── */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 260px;
+    background: #fff;
+    border: 1px solid #dde3ec;
+    border-left: 5px solid #3b82f6;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+}
+
+.card--grande {
+    border-left-color: #7c3aed;
+}
+
+.card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1e3a5f;
+}
+
+.card-fila {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #f0f2f5;
+    color: #4a5568;
+}
+
+.card-fila:last-child {
+    border-bottom: none;
+}
+
+.card-fila span:last-child {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.verde {
+    color: #16a34a !important;
+}
+
+.rojo {
+    color: #dc2626 !important;
+}
+
+/* ── FILTROS ── */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-filtro {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    background: #fff;
+    color: #4a5568;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.btn-filtro:hover {
+    background: #eef2f7;
+}
+
+.btn-filtro.activo {
+    background: #1e3a5f;
+    border-color: #1e3a5f;
+    color: #fff;
+}
+
+/* ── TABLA ── */
+.tabla-wrap {
+    overflow-x: auto;
+    border: 1px solid #dde3ec;
+    border-radius: 8px;
+    background: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+thead {
+    background: #f0f4f8;
+}
+
+th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4a5568;
+    border-bottom: 2px solid #dde3ec;
+}
+
+td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #f0f2f5;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f7fafc;
+}
+
+/* Chip de tipo */
+.chip {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.chip--pequeño {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.chip--grande {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+/* Resultado */
+.res-ganancia {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.res-perdida {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* Barra de ocupación */
+.barra-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.barra-pista {
+    width: 80px;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barra-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.barra-fill--g {
+    background: #16a34a;
+}
+
+.barra-fill--p {
+    background: #dc2626;
+}
+
+.barra-txt {
+    font-size: 0.78rem;
+    color: #718096;
+    min-width: 36px;
+}
+
+/* Contador */
+.contador {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #718096;
+    text-align: right;
+}
+
+/* ── FOOTER ── */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.82rem;
+    color: #718096;
+    border-top: 1px solid #dde3ec;
+    background: #fff;
+}
+
+code {
+    background: #f0f4f8;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #1d4ed8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1.25rem 1rem;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    th,
+    td {
+        padding: 0.6rem 0.75rem;
+    }
+
+    .barra-pista {
+        width: 50px;
+    }
+}

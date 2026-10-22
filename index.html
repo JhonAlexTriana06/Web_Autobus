@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reporte de viajes en autobuses pequeños y grandes." />
+    <title>Reporte de Autobuses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Reporte de Autobuses</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- RESUMEN POR TIPO -->
+        <section aria-labelledby="resumen-titulo">
+            <h2 id="resumen-titulo">Resumen por tipo de vehículo</h2>
+            <div class="cards" id="cards">
+                <!-- JS lo genera -->
+            </div>
+        </section>
+
+        <!-- DETALLE DE VIAJES -->
+        <section aria-labelledby="detalle-titulo">
+            <h2 id="detalle-titulo">Detalle de viajes</h2>
+
+            <!-- Filtros -->
+            <div class="filtros" role="group" aria-label="Filtrar viajes">
+                <button class="btn-filtro activo" data-filtro="todos" id="f-todos">Todos</button>
+                <button class="btn-filtro" data-filtro="PEQUEÑO" id="f-pequeño">Pequeño</button>
+                <button class="btn-filtro" data-filtro="GRANDE" id="f-grande">Grande</button>
+                <button class="btn-filtro" data-filtro="ganancia" id="f-ganancia">✅ Ganancia</button>
+                <button class="btn-filtro" data-filtro="perdida" id="f-perdida">❌ Pérdida</button>
+            </div>
+
+            <!-- Tabla -->
+            <div class="tabla-wrap">
+                <table id="tabla-viajes">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tipo</th>
+                            <th>Capacidad</th>
+                            <th>Pasajeros</th>
+                            <th>Ocupación</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body">
+                        <!-- JS lo genera -->
+                    </tbody>
+                </table>
+            </div>
+            <p class="contador" id="contador" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>JHON TRIANA - ADSO 45</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
